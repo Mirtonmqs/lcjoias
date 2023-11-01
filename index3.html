@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/compras.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/compras.css">
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Minha Lista de Compras</h1>
+    </header>
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="produto card">
+                    <img src="produto1.jpg" class="card-img-top" alt="Produto 1">
+                    <div class="card-body">
+                        <h2 class="card-title">Produto 1</h2>
+                        <p class="card-text">Descrição do Produto 1.</p>
+                        <span class="preco">$19.99</span>
+                        <button class="adicionar-ao-carrinho btn btn-primary">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="produto card">
+                    <img src="produto2.jpg" class="card-img-top" alt="Produto 2">
+                    <div class="card-body">
+                        <h2 class="card-title">Produto 2</h2>
+                        <p class="card-text">Descrição do Produto 2.</p>
+                        <span class="preco">$29.99</span>
+                        <button class="adicionar-ao-carrinho btn btn-primary">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="bg-light p-4">
+        <h2 class="text-center">Carrinho de Compras</h2>
+        <ul id="lista-compras" class="list-unstyled">
+            <!-- Itens selecionados serão adicionados aqui -->
+        </ul>
+        <p class="text-center">Total: <span id="total-compra">$0.00</span></p>
+    </aside>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
