@@ -322,6 +322,7 @@ input, select, textarea {
 		border-bottom-color: #eeeeee;
 	}
 
+
 /* Row */
 
 	.row {
@@ -564,6 +565,25 @@ input, select, textarea {
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 3rem;
 				}
+		
+	/*carrossel*/		
+	.carousel-inner img {
+		max-width: 100%; /* Defina a largura máxima desejada */
+		height: auto;
+	}
+	.carousel-inner {
+		display: block;
+		justify-content: center;
+		align-items: center;
+	}
+	.carousel-inner img {
+		max-height: 300px; /* Defina a altura máxima desejada */
+	}
+	.carousel-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
 		@media screen and (max-width: 1680px) {
 
@@ -3104,6 +3124,7 @@ input, select, textarea {
 /* Pagination */
 
 	.pagination {
+		justify-content: center;
 		display: -moz-inline-flex;
 		display: -webkit-inline-flex;
 		display: -ms-inline-flex;

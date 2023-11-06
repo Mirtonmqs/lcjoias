@@ -177,6 +177,16 @@
 
 				}
 
+
+
+// Adicione event listeners para os controles (por exemplo, setas de navegação)
+document.querySelector('#nextButton').addEventListener('click', nextSlide);
+document.querySelector('#prevButton').addEventListener('click', prevSlide);
+
+// Inicie o carrossel
+updateCarousel();
+
+
 			// Event: Touch stuff.
 				$this.on('touchstart', function(event) {
 
