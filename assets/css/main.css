@@ -573,13 +573,32 @@ input, select, textarea {
 		align-items: center;
 	}
 	.carousel-inner img {
-		max-height: 300px; /* Defina a altura máxima desejada */
+		max-height: 500px; /* Defina a altura máxima desejada */
 	}
 	.carousel-item {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+	/* Remover borda e estilizar botões do carrossel do Bootstrap */
+.carousel-control-prev,
+.carousel-control-next {
+  background: none; /* Remover fundo */
+  border: none; /* Remover borda */
+  font-size: 2rem; /* Ajustar tamanho da fonte conforme necessário */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border: none; /* Remover borda */
+}
+
+/* Opcional: Alterar cor das setas ao passar o mouse */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #333; /* Ajustar cor ao passar o mouse conforme necessário */
+}
+
 
 		@media screen and (max-width: 1680px) {
 
@@ -2643,15 +2662,15 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-			height: 300px;
+			max-width: 100%;
 		}
 
 		.image.left, .image.right {
-			max-width: 30%;
+			max-width: 100%;
 		}
 
 			.image.left img, .image.right img {
-				width: 100%;
+				max-width: 100%;
 			}
 
 		.image.left {
@@ -3373,7 +3392,7 @@ input, select, textarea {
 
 		
 		#intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
-			color: #2f70e1;
+			color:cornflowerblue;
 		}
 
 		#intro input[type="submit"],
@@ -4137,7 +4156,7 @@ input, select, textarea {
 		}
 
 		#footer table tbody tr {
-			border-color: #e2e2e2;
+			border-color:#ae1414;
 		}
 
 			#footer table tbody tr:nth-child(2n + 1) {
