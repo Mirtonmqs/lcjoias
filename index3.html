@@ -1,55 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Carrinho de Compras</title>
+    <!-- Adicione seus estilos CSS aqui -->
     <link rel="stylesheet" href="assets/css/compras.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/compras.css">
-    <title>Lista de Compras</title>
 </head>
-
 <body>
     <header class="bg-dark text-white text-center py-4">
         <h1>Minha Lista de Compras</h1>
     </header>
-    <main class="container mt-4">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="produto card">
-                    <img src="produto1.jpg" class="card-img-top" alt="Produto 1">
-                    <div class="card-body">
-                        <h2 class="card-title">Produto 1</h2>
-                        <p class="card-text">Descrição do Produto 1.</p>
-                        <span class="preco">$19.99</span>
-                        <button class="adicionar-ao-carrinho btn btn-primary">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="produto card">
-                    <img src="produto2.jpg" class="card-img-top" alt="Produto 2">
-                    <div class="card-body">
-                        <h2 class="card-title">Produto 2</h2>
-                        <p class="card-text">Descrição do Produto 2.</p>
-                        <span class="preco">$29.99</span>
-                        <button class="adicionar-ao-carrinho btn btn-primary">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
+    <!-- Exibe a imagem do item -->
+    <div class="box alt">
+        <div class="row gtr-50 gtr-uniform">
+            <div class="col-4">
+                <span class="image fit"><img src="" alt="Imagem do Item" id="item-image"></span>
+                <!-- Exibe a descrição do item, se necessário -->
+                <p>Descrição do Item</p>
             </div>
         </div>
-    </main>
-    <aside class="bg-light p-4">
-        <h2 class="text-center">Carrinho de Compras</h2>
-        <ul id="lista-compras" class="list-unstyled">
-            <!-- Itens selecionados serão adicionados aqui -->
-        </ul>
-        <p class="text-center">Total: <span id="total-compra">$0.00</span></p>
-    </aside>
+    </div>
+
+    <script>
+        // Obtém o caminho da imagem do item da URL
+        const params = new URLSearchParams(window.location.search);
+        const itemImage = params.get('imagem');
+
+        // Mensagem de depuração para verificar o caminho da imagem
+        console.log("Caminho da imagem:", itemImage);
+        
+        // Verifica se há um caminho de imagem válido e, em seguida, atualiza o src da imagem na página
+        if (itemImage) {
+            document.getElementById('item-image').src = decodeURIComponent(itemImage);
+        } else {
+            console.error("Caminho da imagem não encontrado na URL.");
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Se você tiver um arquivo script.js personalizado, você pode incluí-lo aqui -->
 </body>
 </html>
